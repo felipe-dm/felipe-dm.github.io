@@ -6,15 +6,22 @@
     <meta name="description" content="Konsulenttjenester innen web- og systemutvikling">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+          crossorigin="anonymous">
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+          crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self';
-          script-src 'self' https://cdn.report-uri.com; style-src 'self' https://maxcdn.bootstrapcdn.com https://use.fontawesome.com;
-          font-src 'self' https://use.fontawesome.com; connect-src https://riotech.report-uri.com;">
+    <meta http-equiv="Content-Security-Policy" content="
+          default-src 'none';
+          img-src 'self';
+          script-src 'self' https://cdn.report-uri.com;
+          style-src 'self' 'sha256-fF4v9xyBpivhOZRYcrXhqI622rSha1WfmMGppzRgxzc=' https://maxcdn.bootstrapcdn.com https://use.fontawesome.com;
+          font-src 'self' https://use.fontawesome.com;
+          connect-src https://riotech.report-uri.com;">
+    <script src="https://cdn.report-uri.com/libs/report-uri-js/1.0.1/report-uri-js.min.js"
+            integrity="sha256-Cng8gUe98XCqh5hc8nAM3y5I1iQHBjzOl8X3/iAd4jE="
+            crossorigin="anonymous"></script>
     <script type="text/json" id="csp-report-uri">
         {"keys" : ["blockedURI", "columnNumber", "disposition", "documentURI", "effectiveDirective", "lineNumber", "originalPolicy", "referrer", "sample", "sourceFile", "statusCode", "violatedDirective"],
         "reportUri" : "https://riotech.report-uri.com/r/d/csp/enforce"}
@@ -28,7 +35,7 @@
 </head>
 <body>
 <div class="container">
-    <div class="border-bottom">
+    <div class="border-bottom fade" id="fade-1">
         <div class="row p-5 justify-content-center">
             <div class="col text-center">
                 <h1>Rio Tech</h1>
@@ -41,10 +48,10 @@
         </div>
     </div>
     <div class="row justify-content-center align-items-center pt-4">
-        <div class="col-md-3 text-center m-4">
+        <div class="col-md-3 text-center m-4 fade" id="fade-2">
             <img src="felipe.jpg" class="img-fluid rounded-circle" alt="Bilde av Felipe">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 fade" id="fade-3">
             <h4>Felipe Dalevoll Macedo</h4>
             <p>
                 Felipe er utdannet M.Sc i IKT ved UiA med systemutvikling som hovedfag.
@@ -60,5 +67,6 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="animate-rio.js"></script>
 </body>
 </html>
