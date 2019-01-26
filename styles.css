@@ -6,18 +6,6 @@ body {
     opacity: 0;
 }
 
-.delay-1 {
-    animation-delay: 1s;
-}
-
-.delay-2 {
-    animation-delay: 2s;
-}
-
-.delay-3 {
-    animation-delay: 3s;
-}
-
 .fade-animation {
     animation: fadein 3s ease-out;
 }
