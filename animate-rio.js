@@ -7,6 +7,6 @@ function addAndRemoveAnimationClasses (id, time) {
 
 window.addEventListener('load', function () {
   addAndRemoveAnimationClasses('fade-1', 0)
-  addAndRemoveAnimationClasses('fade-2', 2000)
-  addAndRemoveAnimationClasses('fade-3', 1000)
+  addAndRemoveAnimationClasses('fade-2', 1000)
+  addAndRemoveAnimationClasses('fade-3', 2000)
 })
