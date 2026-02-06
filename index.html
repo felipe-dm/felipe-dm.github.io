@@ -1,69 +1,106 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Konsulenttjenester innen web- og systemutvikling">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-          crossorigin="anonymous">
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="Content-Security-Policy" content="
-          default-src 'none';
-          img-src 'self';
-          script-src 'self' https://cdn.report-uri.com;
-          style-src 'self' https://maxcdn.bootstrapcdn.com https://use.fontawesome.com;
-          font-src 'self' https://use.fontawesome.com;
-          connect-src https://riotech.report-uri.com;">
-    <script type="text/json" id="csp-report-uri">
-        {"keys" : ["blockedURI", "columnNumber", "disposition", "documentURI", "effectiveDirective", "lineNumber", "originalPolicy", "referrer", "sample", "sourceFile", "statusCode", "violatedDirective"],
-        "reportUri" : "https://riotech.report-uri.com/r/d/csp/enforce"}
-
-    </script>
-    <script src="https://cdn.report-uri.com/libs/report-uri-js/1.0.1/report-uri-js.min.js"
-            integrity="sha256-Cng8gUe98XCqh5hc8nAM3y5I1iQHBjzOl8X3/iAd4jE="
-            crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <meta name="description" content="Rio Tech - Konsulenttjenester innen web- og systemutvikling. Consulting services in web and systems development.">
     <title>Rio Tech</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-    <div class="border-bottom fade" id="fade-1">
-        <div class="row p-5 justify-content-center">
-            <div class="col text-center">
-                <h1>Rio Tech</h1>
+
+    <header class="site-header fade-in">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+            <span class="lang-option active" data-lang-target="no">NO</span>
+            <span class="divider">|</span>
+            <span class="lang-option" data-lang-target="en">EN</span>
+        </button>
+    </header>
+
+    <main class="container">
+        <section class="profile-card fade-in delay-1">
+            <div class="profile-image-wrapper">
+                <img src="felipe.jpg" alt="Felipe Dalevoll Macedo" class="profile-image">
             </div>
-        </div>
-        <div class="row justify-content-center pb-5">
-            <div class="col text-center">
-                <h2>Konsulenttjenester innen web- og systemutvikling</h2>
+            
+            <div class="profile-content">
+                <div class="company-header">
+                    <h1>Rio Tech</h1>
+                    <p class="tagline" data-lang="no">Konsulenttjenester innen web- og systemutvikling</p>
+                    <p class="tagline" data-lang="en" style="display: none;">Consulting services in web and systems development</p>
+                </div>
+
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab-target="about">
+                        <span data-lang="no">Om meg</span>
+                        <span data-lang="en" style="display: none;">About</span>
+                    </button>
+                    <button class="tab-btn" data-tab-target="services">
+                        <span data-lang="no">Tjenester</span>
+                        <span data-lang="en" style="display: none;">Services</span>
+                    </button>
+                </div>
+
+                <div class="tab-panel active" data-tab="about">
+                    <div class="bio-section">
+                        <h2>Felipe Dalevoll Macedo</h2>
+                        <div class="bio-text">
+                            <p data-lang="no">Felipe er utdannet M.Sc i IKT ved UiA med systemutvikling som hovedfag. Han har over 15 års erfaring som fullstack-utvikler og jobber for tiden med forvaltning og utvikling av nye tjenester i forsikrings- og finansbransjen.</p>
+                            <p data-lang="en" style="display: none;">Felipe holds an M.Sc in ICT from the University of Agder, specializing in systems development. With over 15 years of experience as a full-stack developer, he currently works on the management and development of new services in the insurance and finance industry.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/felipe-dalevoll-macedo-2380b124" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:felipe@riotech.no" aria-label="Email">
+                            <svg class="icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tab-panel" data-tab="services">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">⚡</div>
+                            <h4 data-lang="no">Systemutvikling</h4>
+                            <h4 data-lang="en" style="display: none;">Systems Development</h4>
+                            <p data-lang="no">Fullstack-utvikling med Kotlin/Spring og React/TypeScript</p>
+                            <p data-lang="en" style="display: none;">Full-stack development with Kotlin/Spring and React/TypeScript</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🔗</div>
+                            <h4 data-lang="no">Systemintegrasjon</h4>
+                            <h4 data-lang="en" style="display: none;">Systems Integration</h4>
+                            <p data-lang="no">Arkitektur og utvikling av komplekse systemer med mange integrasjoner</p>
+                            <p data-lang="en" style="display: none;">Architecture and development of complex systems with multiple integrations</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🤖</div>
+                            <h4 data-lang="no">AI & Produktivitet</h4>
+                            <h4 data-lang="en" style="display: none;">AI & Productivity</h4>
+                            <p data-lang="no">Effektiviserer utvikling og leveranser med AI-verktøy</p>
+                            <p data-lang="en" style="display: none;">Streamlining development and delivery with AI tools</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">📐</div>
+                            <h4 data-lang="no">Teknisk ledelse</h4>
+                            <h4 data-lang="en" style="display: none;">Technical Leadership</h4>
+                            <p data-lang="no">Erfaring som product lead, backend-arkitekt, tech lead og fullstack-utvikler. Domenekunnskap i pensjon, forsikring og finans</p>
+                            <p data-lang="en" style="display: none;">Experience working as product lead, backend architect, tech lead, and full-stack developer. Domain expertise in pension, insurance and finance</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row justify-content-center align-items-center pt-4">
-        <div class="col-md-3 text-center m-4 fade" id="fade-2">
-            <img src="felipe.jpg" class="img-fluid rounded-circle" alt="Bilde av Felipe">
-        </div>
-        <div class="col-md-6 fade" id="fade-3">
-            <h4>Felipe Dalevoll Macedo</h4>
-            <p>
-                Felipe er utdannet M.Sc i IKT ved UiA med systemutvikling som hovedfag.
-                Han har over ti års erfaring som full stack utvikler og jobber for tiden
-                med forvaltning og utvikling av nye tjenester i forsikrings- og finansbransjen.
-            </p>
-            <a href="https://www.linkedin.com/in/felipe-dalevoll-macedo-2380b124" class="pr-2">
-                <i class="fab fa-linkedin fa-3x"></i>
-            </a>
-            <a href="mailto:felipe@riotech.no">
-                <i class="fas fa-envelope-square fa-3x"></i>
-            </a>
-        </div>
-    </div>
-</div>
-<script type="text/javascript" src="animate-rio.js"></script>
+        </section>
+    </main>
+
+    <script src="animate-rio.js"></script>
 </body>
 </html>
