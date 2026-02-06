@@ -10,15 +10,18 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Hopp til innhold</a>
+
     <header class="site-header fade-in">
         <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
             <span class="lang-option active" data-lang-target="no">NO</span>
-            <span class="divider">|</span>
+            <span class="divider" aria-hidden="true">|</span>
             <span class="lang-option" data-lang-target="en">EN</span>
         </button>
+        <span id="lang-announce" class="sr-only" aria-live="polite"></span>
     </header>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <section class="profile-card fade-in delay-1">
             <div class="profile-image-wrapper">
                 <img src="felipe.jpg" alt="Felipe Dalevoll Macedo" class="profile-image">
@@ -31,18 +34,18 @@
                     <p class="tagline" data-lang="en" style="display: none;">Consulting services in web and systems development</p>
                 </div>
 
-                <div class="tabs-nav">
-                    <button class="tab-btn active" data-tab-target="about">
+                <div class="tabs-nav" role="tablist" aria-label="Innhold">
+                    <button class="tab-btn active" id="tab-about" role="tab" aria-selected="true" aria-controls="panel-about" data-tab-target="about">
                         <span data-lang="no">Om meg</span>
                         <span data-lang="en" style="display: none;">About</span>
                     </button>
-                    <button class="tab-btn" data-tab-target="services">
+                    <button class="tab-btn" id="tab-services" role="tab" aria-selected="false" aria-controls="panel-services" data-tab-target="services">
                         <span data-lang="no">Tjenester</span>
                         <span data-lang="en" style="display: none;">Services</span>
                     </button>
                 </div>
 
-                <div class="tab-panel active" data-tab="about">
+                <div class="tab-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about" data-tab="about">
                     <div class="bio-section">
                         <h2>Felipe Dalevoll Macedo</h2>
                         <div class="bio-text">
@@ -65,33 +68,33 @@
                     </div>
                 </div>
 
-                <div class="tab-panel" data-tab="services">
+                <div class="tab-panel" id="panel-services" role="tabpanel" aria-labelledby="tab-services" data-tab="services">
                     <div class="services-grid">
                         <div class="service-card">
                             <div class="service-icon">⚡</div>
-                            <h4 data-lang="no">Systemutvikling</h4>
-                            <h4 data-lang="en" style="display: none;">Systems Development</h4>
+                            <h3 data-lang="no">Systemutvikling</h3>
+                            <h3 data-lang="en" style="display: none;">Systems Development</h3>
                             <p data-lang="no">Fullstack-utvikling med Kotlin/Spring og React/TypeScript</p>
                             <p data-lang="en" style="display: none;">Full-stack development with Kotlin/Spring and React/TypeScript</p>
                         </div>
                         <div class="service-card">
                             <div class="service-icon">🔗</div>
-                            <h4 data-lang="no">Systemintegrasjon</h4>
-                            <h4 data-lang="en" style="display: none;">Systems Integration</h4>
+                            <h3 data-lang="no">Systemintegrasjon</h3>
+                            <h3 data-lang="en" style="display: none;">Systems Integration</h3>
                             <p data-lang="no">Arkitektur og utvikling av komplekse systemer med mange integrasjoner</p>
                             <p data-lang="en" style="display: none;">Architecture and development of complex systems with multiple integrations</p>
                         </div>
                         <div class="service-card">
                             <div class="service-icon">🤖</div>
-                            <h4 data-lang="no">AI & Produktivitet</h4>
-                            <h4 data-lang="en" style="display: none;">AI & Productivity</h4>
+                            <h3 data-lang="no">AI & Produktivitet</h3>
+                            <h3 data-lang="en" style="display: none;">AI & Productivity</h3>
                             <p data-lang="no">Effektiviserer utvikling og leveranser med AI-verktøy</p>
                             <p data-lang="en" style="display: none;">Streamlining development and delivery with AI tools</p>
                         </div>
                         <div class="service-card">
                             <div class="service-icon">📐</div>
-                            <h4 data-lang="no">Teknisk ledelse</h4>
-                            <h4 data-lang="en" style="display: none;">Technical Leadership</h4>
+                            <h3 data-lang="no">Teknisk ledelse</h3>
+                            <h3 data-lang="en" style="display: none;">Technical Leadership</h3>
                             <p data-lang="no">Erfaring som product lead, backend-arkitekt, tech lead og fullstack-utvikler. Domenekunnskap i pensjon, forsikring og finans</p>
                             <p data-lang="en" style="display: none;">Experience working as product lead, backend architect, tech lead, and full-stack developer. Domain expertise in pension, insurance and finance</p>
                         </div>
